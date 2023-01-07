@@ -8,14 +8,14 @@ export default class Calculator{
     setScreen(screen){
         this.#screen = screen;
     }
-    getScreen(){
+    get Screen(){
         return this.#screen;
     }
     setbuttons(button){
         this.#buttons.push(button);
             
     }
-    getbuttons(){
+    get buttons(){
         return this.#buttons;}
 
 }

@@ -1,0 +1,20 @@
+@mixin FlexDisplay( $flex-direction-parameter, $align-item-parameters, $justify-content-parameter, $width-parameter, $heigth-parameter){
+    display: flex;
+    flex-direction: $flex-direction-parameter;
+    align-items: $align-item-parameters;
+    justify-content: $justify-content-parameter;
+    width: $width-parameter;
+    height: $heigth-parameter;
+}
+@mixin gridDisplay($row-parameter, $column-parameter, $width-parameter, $heigth-parameter) {
+    display: grid;
+    grid-template: repeat($row-parameter, 1fr) / repeat($column-parameter, 1fr);
+    width: $width-parameter;
+    height: $heigth-parameter;
+}
+@mixin ItemGridPosition($start-row-parameter, $end-row-parameter, $start-column-parameter, $end-column-parameter){
+    grid-row-start: $start-row-parameter;
+    grid-row-end: $end-row-parameter;
+    grid-column-start: $start-column-parameter;
+    grid-column-end: $end-column-parameter;
+}

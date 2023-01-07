@@ -1,13 +1,13 @@
 export default class Screen{
     #Content
-    contructor(){
+    constructor(){
         this.#Content="";
 
     }
     setContent(content){
         this.#Content = content;
     }
-    getContent(){
+    get Content(){
         return this.#Content;
     }
 }

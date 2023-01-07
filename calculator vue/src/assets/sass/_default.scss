@@ -1,0 +1,18 @@
+@use '../sass/mixins' as *;
+
+$principalcolor: #4F4F4F;
+$screencolor: #34682B;
+$fontcolor:#FFFFFF;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    width: 100%;
+}
+#app{
+    @include FlexDisplay(column, stretch, normal, 100%, 80vh);
+}

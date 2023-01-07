@@ -1,13 +1,13 @@
 export default class Button{
-    #Key
-    contructor(key){
+    #Key;
+    constructor(key){
         this.#Key=key;
 
     }
     setKey(key){
         this.#Key = key;
     }
-    getKey(){
+    get Key(){
         return this.#Key;
     }
 }
