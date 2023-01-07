@@ -1,9 +1,9 @@
 export default class Calculator{
     #screen
     #buttons
-    constructor(){
-        this.#screen;
-        this.#buttons = new Array();
+    constructor(screen, buttons){
+        this.#screen = screen;
+        this.#buttons = buttons;
     }
     setScreen(screen){
         this.#screen = screen;
@@ -15,7 +15,7 @@ export default class Calculator{
         this.#buttons.push(button);
             
     }
-    getbuttons(){return
-    this.#buttons;}
+    getbuttons(){
+        return this.#buttons;}
 
 }
