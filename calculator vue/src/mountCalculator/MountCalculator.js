@@ -11,8 +11,8 @@ export default function MountCalculator(){
 }
 export function MountKeyboard(){
     let temporalkeyboard = new Array();
-    let itemButtons = ["1","2","3","+","4","5","6","-","7","8","9","*", "0","/",".", "CE","="];
-    for (let index = 0;  temporalkeyboard.length <= 16; index++){
+    let itemButtons = ["7","8","9","+","4","5","6","-","1","2","3","*", ".","0","/", "CE","$","¥","L","="];
+    for (let index = 0;  temporalkeyboard.length <= 19; index++){
         
         temporalkeyboard.push(new Button(itemButtons[index]))
     }

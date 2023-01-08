@@ -6,9 +6,55 @@ import Button from './Button.vue';
 let myCaculator = MountCalculator();
 let temporalOutput = ref('');
 
+
 const showKey = (keyButton) =>{
+    if(keyButton == "CE"){
+        myCaculator.Screen.setContent('');
+        temporalOutput.value = myCaculator.Screen.Content; 
+        return;
+    }
+    if(keyButton == "="){
+        
+        if(controlSyntaxError(temporalOutput.value) != 'error'){
+            myCaculator.Screen.setContent(eval(temporalOutput.value));
+            temporalOutput.value = myCaculator.Screen.Content;
+            return;
+        }
+        if(controlSyntaxError(temporalOutput.value) == "error"){
+            myCaculator.Screen.setContent('syntax error');
+            temporalOutput.value = myCaculator.Screen.Content;
+            return;
+        }
+    }
+    if(keyButton == "L"){
+            myCaculator.Screen.setContent((eval(temporalOutput.value)*26.31).toFixed(2));
+            temporalOutput.value = myCaculator.Screen.Content;
+            return;
+    }
+    if(keyButton == "$"){
+            myCaculator.Screen.setContent((eval(temporalOutput.value)*1.07).toFixed(2));
+            temporalOutput.value = myCaculator.Screen.Content;
+            return;
+    }
+    if(keyButton == "¥"){
+            myCaculator.Screen.setContent((eval(temporalOutput.value)*140.85).toFixed(2));
+            temporalOutput.value = myCaculator.Screen.Content;
+            return;
+    }
     myCaculator.Screen.setContent(keyButton);
     temporalOutput.value += myCaculator.Screen.Content;
+}
+function controlSyntaxError(string){
+        try {
+            eval(string); 
+        } catch (e) {
+        if(e instanceof SyntaxError){
+            return "error"
+            } 
+        else{
+            return 'no error'
+            }
+        }
 }
 </script>
 <template>

@@ -3,6 +3,10 @@ const props = defineProps({
     Key:{
         type: String,
         required: true
+    },
+    TypeKey:{
+        type: String,
+        default: $principalcolor
     }
 });
 
