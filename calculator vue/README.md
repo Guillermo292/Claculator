@@ -25,15 +25,6 @@ Requisitos mínimos Conversor de Divisas:
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,sass,vue,vite)](https://skillicons.dev)
 
-## Developers team
-
-* Guillermo Trigueros
-* David Daza
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
@@ -62,3 +53,8 @@ npm run build
 ```sh
 npm run test
 ```
+
+## Developers team
+
+* Guillermo Trigueros
+* David Daza
