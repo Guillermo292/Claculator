@@ -15,7 +15,6 @@ const emits = defineEmits(['emitKey']);
 const emitKey = ()=>{
     emits('emitKey', props.Key)
 }
-console.log(props.TypeKey);
 </script>
 <template>
     <div :class="['button',changeColor]" @click="emitKey">

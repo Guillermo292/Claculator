@@ -76,17 +76,17 @@ function controlSyntaxError(string){
 <style lang="scss" scoped>
 @use '../../assets/sass/main' as *;
 .calculator{
-    @include FlexDisplay(column, center, normal, 60%, 100%);
+    @include FlexDisplay(column, center, normal, 100%, 100%);
     background-color: $principalcolor;
    
     .screen{
         @include FlexDisplay(row, center, flex-end, 100%, 20%);
         background-color: $principalcolor;
         border-bottom: 1px solid white;
+        font-size: x-large;
     }
     .keyboard-space{
-        /* @include FlexDisplay(row, normal, normal, 100%, 80%);
-        flex-wrap: wrap; */
+        
         @include gridDisplay(5,4,100%,80%);
         .button-space{
             @include FlexDisplay(row, center, center, 100%, 100%);

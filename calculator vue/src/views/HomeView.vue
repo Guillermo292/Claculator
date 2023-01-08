@@ -8,8 +8,8 @@ import Calculator from '../components/MyCalculator/Calculator.vue';
   </main>
 </template>
 <style lang="scss" scoped>
+@use '../assets/sass/main' as *;
   main{
-    width: 100%;
-    height: 100%;
+    @include FlexDisplay(row, center, center, 100%, 100%);
   }
 </style>
