@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import MountCalculator from '../../mountCalculator/MountCalculator';
 import Button from './Button.vue';
 
@@ -56,6 +56,7 @@ function controlSyntaxError(string){
             }
         }
 }
+
 </script>
 <template>
     <div class="calculator">
@@ -77,9 +78,11 @@ function controlSyntaxError(string){
 .calculator{
     @include FlexDisplay(column, center, normal, 60%, 100%);
     background-color: $principalcolor;
+   
     .screen{
         @include FlexDisplay(row, center, flex-end, 100%, 20%);
-        background-color: $screencolor;
+        background-color: $principalcolor;
+        border-bottom: 1px solid white;
     }
     .keyboard-space{
         /* @include FlexDisplay(row, normal, normal, 100%, 80%);

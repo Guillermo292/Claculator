@@ -1,24 +1,24 @@
 <script setup>
+import { computed } from 'vue';
+import ComprovedSign from "../../mountCalculator/AuxiliarFunction"
 const props = defineProps({
     Key:{
         type: String,
         required: true
     },
-    TypeKey:{
-        type: String,
-        default: $principalcolor
-    }
 });
-
+const changeColor = computed(()=>{
+    return (ComprovedSign(props.Key)) ? "green" : "gray";
+})
 const emits = defineEmits(['emitKey']);
 
 const emitKey = ()=>{
     emits('emitKey', props.Key)
 }
-
+console.log(props.TypeKey);
 </script>
 <template>
-    <div class="button" @click="emitKey">
+    <div :class="['button',changeColor]" @click="emitKey">
         <h1>{{ Key }}</h1>
     </div>
 </template>
@@ -26,6 +26,11 @@ const emitKey = ()=>{
 @use '../../assets/sass/main' as *;
 
 .button{
-    @include FlexDisplay(column, center, center, 100%, 100%)
+    @include FlexDisplay(column, center, center, 100%, 100%);
+    //
+
 }
+.green{
+        color: white;
+    }
 </style>
